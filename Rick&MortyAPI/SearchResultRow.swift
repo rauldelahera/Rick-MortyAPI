@@ -13,14 +13,18 @@ struct SearchResultRow: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: resultVM.imgUrl)
+            AsyncImage(url: resultVM.imgUrl) { image in image.resizable()
+            } placeholder: {
+                Image(systemName: "camera.fill")
+            }
             .frame(width: 100, height: 100)
             .cornerRadius(10)
             Text(resultVM.characterName)
-                .font(.system(size: 26, weight: .heavy, design: .default))
+                .font(.system(size: 24, weight: .heavy, design: .default))
+                .lineLimit(2)
             Spacer()
             Text(resultVM.species)
-                .font(.system(size: 16, weight: .light, design: .default))
+                .font(.system(size: 20, weight: .light, design: .default))
         }.padding()
     }
 }

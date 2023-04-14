@@ -9,7 +9,7 @@ import Foundation
 
 //MARK: - Main Object
 struct SearchResponse: Codable {
-    let info: [Info]?
+    let info: Info
     let results: [SearchResult]?
 }
 

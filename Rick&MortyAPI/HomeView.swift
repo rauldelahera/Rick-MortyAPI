@@ -13,15 +13,14 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                List {
-                    ForEach(viewModel.results, id: \.id) {
-                        SearchResultRow(resultVM: SearchResultVM(model: $0))
-                    }
+            List {
+                ForEach(viewModel.results, id: \.id) {
+                    SearchResultRow(resultVM: SearchResultVM(model: $0))
                 }
             }
             .navigationTitle("Characters")
         }
+        .onAppear(perform: viewModel.performSearch)
     }
 }
 

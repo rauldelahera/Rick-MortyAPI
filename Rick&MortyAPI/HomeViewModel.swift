@@ -25,7 +25,7 @@ class HomeViewModel: ObservableObject {
                     self?.results = response.results ?? []
                 }
             } catch {
-                print("*** ERROR ***")
+                print("*** ERROR ***\(error)")
             }
         }
     }
