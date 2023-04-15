@@ -15,17 +15,10 @@ struct HomeView: View {
         NavigationStack {
             List {
                 ForEach(viewModel.results, id: \.id) { result in
-                    NavigationLink {
-                        VStack() {
-                            AsyncImage(url: URL(string: result.image)){ image in image.resizable()
-                            } placeholder: {
-                                Image(systemName: "camera.fill")
-                            }
-                            .frame(width: 200, height: 200)
-                            Text(result.name!)
-                        }.navigationTitle(result.name!)
-                    } label: {
                     let viewModel = SearchResultVM(model: result)
+                    NavigationLink {
+                        ItemDetail(resultVM: viewModel)
+                    } label: {
                     SearchResultRow(resultVM: viewModel)
                     }
                 }

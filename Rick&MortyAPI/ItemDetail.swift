@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct ItemDetail: View {
-
+    
+    let resultVM: SearchResultVM
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack() {
+            AsyncImage(url: resultVM.imgUrl){ image in image.resizable()
+            } placeholder: {
+                Image(systemName: "camera.fill")
+            }
+            .frame(width: 200, height: 200)
+            Text(resultVM.characterName)
+        }.navigationTitle(resultVM.characterName)
     }
 }
 
 struct ItemDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ItemDetail()
+        ItemDetail(resultVM: SearchResultVM(model: SearchResult.example))
     }
 }
