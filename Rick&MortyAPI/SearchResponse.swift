@@ -9,17 +9,11 @@ import Foundation
 
 //MARK: - Main Object
 struct SearchResponse: Codable {
-    let info: Info
     let results: [SearchResult]?
 }
 
-struct Info: Codable {
-    var count: Int?
-    var pages: Int?
-}
-
 //MARK: - Result Item
-struct SearchResult: Codable {
+struct SearchResult: Codable, Hashable {
     var id: Int?
     var name: String?
     var species: String?
