@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6331215129EA5CDD00F6E983 /* ItemDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6331215029EA5CDD00F6E983 /* ItemDetail.swift */; };
 		6375A2BF29E923AA005AEBFF /* Rick_MortyAPIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375A2BE29E923AA005AEBFF /* Rick_MortyAPIApp.swift */; };
 		6375A2C129E923AA005AEBFF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375A2C029E923AA005AEBFF /* ContentView.swift */; };
 		6375A2C329E923AD005AEBFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6375A2C229E923AD005AEBFF /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6331215029EA5CDD00F6E983 /* ItemDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetail.swift; sourceTree = "<group>"; };
 		6375A2BB29E923AA005AEBFF /* Rick&MortyAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rick&MortyAPI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6375A2BE29E923AA005AEBFF /* Rick_MortyAPIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rick_MortyAPIApp.swift; sourceTree = "<group>"; };
 		6375A2C029E923AA005AEBFF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				6375A2BE29E923AA005AEBFF /* Rick_MortyAPIApp.swift */,
 				6375A2C029E923AA005AEBFF /* ContentView.swift */,
 				6375A2D029E9275D005AEBFF /* HomeView.swift */,
+				6331215029EA5CDD00F6E983 /* ItemDetail.swift */,
 				6375A2D429E92D25005AEBFF /* SearchResultRow.swift */,
 				6375A2D629E92EB1005AEBFF /* SearchResultVM.swift */,
 				6375A2D229E92B5E005AEBFF /* HomeViewModel.swift */,
@@ -157,6 +160,7 @@
 				6375A2BF29E923AA005AEBFF /* Rick_MortyAPIApp.swift in Sources */,
 				6375A2D729E92EB1005AEBFF /* SearchResultVM.swift in Sources */,
 				6375A2D329E92B5E005AEBFF /* HomeViewModel.swift in Sources */,
+				6331215129EA5CDD00F6E983 /* ItemDetail.swift in Sources */,
 				6375A2CD29E92400005AEBFF /* SearchResponse.swift in Sources */,
 				6375A2D529E92D25005AEBFF /* SearchResultRow.swift in Sources */,
 			);

@@ -12,10 +12,22 @@ struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
-                ForEach(viewModel.results, id: \.id) {
-                    SearchResultRow(resultVM: SearchResultVM(model: $0))
+                ForEach(viewModel.results, id: \.id) { result in
+                    NavigationLink {
+                        VStack() {
+                            AsyncImage(url: URL(string: result.image)){ image in image.resizable()
+                            } placeholder: {
+                                Image(systemName: "camera.fill")
+                            }
+                            .frame(width: 200, height: 200)
+                            Text(result.name!)
+                        }.navigationTitle(result.name!)
+                    } label: {
+                    let viewModel = SearchResultVM(model: result)
+                    SearchResultRow(resultVM: viewModel)
+                    }
                 }
             }
             .navigationTitle("Characters")
