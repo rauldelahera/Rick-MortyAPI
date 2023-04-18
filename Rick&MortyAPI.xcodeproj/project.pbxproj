@@ -19,6 +19,7 @@
 		6375A2D729E92EB1005AEBFF /* SearchResultVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6375A2D629E92EB1005AEBFF /* SearchResultVM.swift */; };
 		7ADC791329EE9C7D00464D11 /* CharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC791229EE9C7D00464D11 /* CharacterService.swift */; };
 		7ADC791B29EE9D9E00464D11 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC791A29EE9D9E00464D11 /* HomeViewModelTests.swift */; };
+		7ADC792229EEA5A200464D11 /* MockCharacterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADC792129EEA5A200464D11 /* MockCharacterService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		7ADC791229EE9C7D00464D11 /* CharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterService.swift; sourceTree = "<group>"; };
 		7ADC791829EE9D9E00464D11 /* Rick&MortyAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rick&MortyAPITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADC791A29EE9D9E00464D11 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		7ADC792129EEA5A200464D11 /* MockCharacterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCharacterService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				7ADC791A29EE9D9E00464D11 /* HomeViewModelTests.swift */,
+				7ADC792129EEA5A200464D11 /* MockCharacterService.swift */,
 			);
 			path = "Rick&MortyAPITests";
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ADC791B29EE9D9E00464D11 /* HomeViewModelTests.swift in Sources */,
+				7ADC792229EEA5A200464D11 /* MockCharacterService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
