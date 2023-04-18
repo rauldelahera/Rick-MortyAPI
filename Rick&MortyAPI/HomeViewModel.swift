@@ -9,23 +9,23 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     
-    @Published var results = [SearchResult]()
+    @Published var results: [SearchResult] = []
+    private let characterService: CharacterServiceProtocol
     
-    func performSearch () {
-        
-        guard let gUrl = URL(
+    init(characterService: CharacterServiceProtocol) {
+        self.characterService = characterService
+    }
+
+    func performSearch() {
+        guard let url = URL(
             string: "https://rickandmortyapi.com/api/character"
         ) else { return }
         
         Task {
-            do {
-                let (data, _) = try await URLSession.shared.data(from: gUrl)
-                let response = try JSONDecoder().decode(SearchResponse.self, from: data)
-                DispatchQueue.main.async { [weak self] in
-                    self?.results = response.results ?? []
+            if let fetchedResults = try? await characterService.fetchData(url: url) {
+                await MainActor.run {
+                    results = fetchedResults
                 }
-            } catch {
-                print("*** ERROR ***\(error)")
             }
         }
     }
