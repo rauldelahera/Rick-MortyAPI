@@ -10,9 +10,9 @@ import Foundation
 class HomeViewModel: ObservableObject {
     
     @Published var results: [SearchResult] = []
-    private let characterService: CharacterService
+    private let characterService: CharacterServiceProtocol
     
-    init(characterService: CharacterService) {
+    init(characterService: CharacterServiceProtocol) {
         self.characterService = characterService
     }
 
