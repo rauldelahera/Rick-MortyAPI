@@ -17,19 +17,13 @@ class HomeViewModel: ObservableObject {
         self.characterService = characterService
     }
     
-    private func fetchData(url: URL) async throws -> [SearchResult] {
-        let (data, _) = try await URLSession.shared.data(from: url)
-        let response = try JSONDecoder().decode(SearchResponse.self, from: data)
-        return response.results ?? []
-    }
-    
     func performSearch() {
         guard let url = URL(
             string: "https://rickandmortyapi.com/api/character"
         ) else { return }
         
         Task {
-            if let fetchedResults = try? await fetchData(url: url) {
+            if let fetchedResults = try? await characterService.fetchData(url: url) {
                 await MainActor.run {
                     results = fetchedResults
                 }
