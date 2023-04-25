@@ -7,7 +7,11 @@
 
 import Foundation
 
-class CharacterService {
+protocol CharacterServiceProtocol {
+    func fetchData(url: URL) async throws -> [SearchResult]
+}
+
+class CharacterService: CharacterServiceProtocol {
     func fetchData(url: URL) async throws -> [SearchResult] {
         let (data, _) = try await URLSession.shared.data(from: url)
         let response = try JSONDecoder().decode(SearchResponse.self, from: data)
