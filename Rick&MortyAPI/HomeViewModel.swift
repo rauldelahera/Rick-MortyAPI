@@ -9,7 +9,13 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     
-    @Published var results = [SearchResult]()
+    @Published var results: [SearchResult] = []
+    
+    private let characterService: CharacterService
+    
+    init(characterService: CharacterService) {
+        self.characterService = characterService
+    }
     
     private func fetchData(url: URL) async throws -> [SearchResult] {
         let (data, _) = try await URLSession.shared.data(from: url)
